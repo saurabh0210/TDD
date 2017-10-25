@@ -21,4 +21,13 @@ public class MommifierTest {
     public void shouldNotMommifyConsonantString(){
         assertEquals("b", mommifier.mommify("b"));
     }
+    
+    @Test
+    public void shouldMommifySingleVowelString() {
+    	assertEquals("mommy", mommifier.mommify("a"));
+    	assertEquals("mommy", mommifier.mommify("e"));
+    	assertEquals("mommy", mommifier.mommify("i"));
+    	assertEquals("mommy", mommifier.mommify("o"));
+    	assertEquals("mommy", mommifier.mommify("u"));
+    }
 }
