@@ -41,4 +41,15 @@ public class MommifierTest {
     	assertEquals("bmommyd",mommifier.mommify("bod"));
     	assertEquals("bmommyd",mommifier.mommify("bud"));
     }
+    
+    @Test
+    public void shouldMommifyStringWithMultipleVowels(){
+    	
+    	assertEquals("mmommyt",mommifier.mommify("meet"));
+    	assertEquals("grmommyt",mommifier.mommify("greet"));
+    	assertEquals("blmommyd",mommifier.mommify("blood"));
+    	assertEquals("gmommydgmommyrlmmommytsmommyngmommyt",mommifier.mommify("goodgirlmeetsingit"));
+    	assertEquals("mommy",mommifier.mommify("aeiou"));
+    }
+    
 }

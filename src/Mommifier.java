@@ -14,7 +14,23 @@ public class Mommifier {
         case 'i':
         case 'o':
         case 'u':
-        	newInput=newInput+"mommy";
+        	if(i == len -1) {
+        		newInput=newInput+"mommy";
+            	break;
+        	}
+        	else {
+        		switch(input.charAt(i+1)) {
+        		case 'a': 
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                	break;
+                default:
+                	newInput=newInput+"mommy";
+                	break;
+        		}
+        	}
         	break;
         default:
         	newInput=newInput+input.charAt(i);
