@@ -1,18 +1,27 @@
-
-
 public class Mommifier {
     public String mommify(String input) {
-    	if(input.length() == 0)
+    	int len=input.length();
+    	String newInput="";
+    	if(len == 0)
     		return "";
-        switch(input.charAt(0)){
+    	else
+    	{
+    		for(int i=0;i<len;i++)
+    		{
+        switch(input.charAt(i)){
         case 'a': 
         case 'e':
         case 'i':
         case 'o':
         case 'u':
-        	return "mommy";
+        	newInput=newInput+"mommy";
+        	break;
         default:
-        	return input;
+        	newInput=newInput+input.charAt(i);
+        	break;
         }
+    	}
+    		return newInput;
+    	}
     }
 }
